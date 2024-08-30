@@ -1,6 +1,14 @@
-import React from "react";
+import { useState } from "react"; 
+
 
 const SignIn = () => {
+  const [userCredentials, setUserCredentials] = useState({email: "", password: ""});
+
+  const handleChange = (event) => {
+    setUserCredentials({...userCredentials, [event.target.name]: event.target.value});
+    console.log(userCredentials);
+  }
+
   return (
     <div>
       <div className="relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-white px-10 text-center dark:bg-dark-2 sm:px-12 md:px-[60px]">
@@ -10,8 +18,8 @@ const SignIn = () => {
           </a>
         </div>
         <form>
-          <InputBox type="email" name="email" placeholder="Email" />
-          <InputBox type="password" name="password" placeholder="Password" />
+          <InputBox type="email" name="email" placeholder="Email" onChange={handleChange}/>
+          <InputBox type="password" name="password" placeholder="Password" onChange={handleChange}/>
           <div className="mb-10">
             <input
               type="submit"
@@ -101,7 +109,7 @@ const SignIn = () => {
 
 export default SignIn;
 
-const InputBox = ({ type, placeholder, name }) => {
+const InputBox = ({ type, placeholder, name, onChange}) => {
   return (
     <div className="mb-6">
       <input
@@ -109,6 +117,7 @@ const InputBox = ({ type, placeholder, name }) => {
         placeholder={placeholder}
         name={name}
         className="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:text-white"
+        onChange={onChange}
       />
     </div>
   );
