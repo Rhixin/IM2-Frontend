@@ -1,0 +1,22 @@
+.menu-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  text-transform: none;
+  color: white;
+  border-radius: 0% !important;
+}
+
+.menu-avatar {
+  height: 35px;
+  width: 35px;
+  margin-left: 15px;
+}
+
+.no-transition {
+  transition: none !important;
+}
