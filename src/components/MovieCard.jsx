@@ -4,7 +4,7 @@ const MovieCard = () => {
   return (
     <div className="bg-white shadow-md  rounded-xl mt-60 mx-[30rem] ">
       <div
-        className="relative bg-cover bg-center bg-no-repeat  p-4 shadow-md rounded-xl"
+        className="relative bg-cover bg-center bg-no-repeat  p-4 shadow-md rounded-xl h-80"
         style={{
           backgroundImage: `url('https://cdn.marvel.com/content/1x/dp3_1sht_digital_srgb_ka_swords_v5_resized.jpg')`,
         }}
@@ -31,7 +31,7 @@ const MovieCard = () => {
               </span>
             </div>
           </div>
-          <div className="w-32 h-48 rounded-lg overflow-hidden shadow-md">
+          <div className="w-56 h-72 rounded-lg overflow-hidden shadow-md">
             <img
               className="object-cover object-center w-full h-full"
               alt="hero"

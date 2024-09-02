@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import MovieCard from "./MovieCard.jsx";
 import ComingSoon from "./ComingSoon.jsx";
+import Slider from "./Slider.jsx";
+import NowShowing from "./NowShowing.jsx";
 
 export default function Movies({ theme }) {
   return (
@@ -11,10 +13,7 @@ export default function Movies({ theme }) {
       exit={{ opacity: 0 }}
       className="flex-col justify-center align-center"
     >
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
+      <NowShowing />
     </motion.div>
   );
 }

@@ -14,7 +14,7 @@ export default function Home({ theme }) {
     >
       <Banner theme={theme} />
 
-      <Slider />
+      <Slider depth={100} space={0} />
       <ComingSoon theme={theme} />
       <ComingSoon theme={theme} />
       <ComingSoon theme={theme} />
